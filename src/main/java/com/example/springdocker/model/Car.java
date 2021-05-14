@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class Car {
     String id;
     String name;
-    boolean delicious;
-    boolean canICookIt;
+    boolean fast;
+    boolean canIDriveIt;
 }
