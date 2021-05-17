@@ -62,8 +62,5 @@ public class CarServiceTest {
 
         assertEquals(car.getName(), drivableCars.get(0));
 
-        verify(carRepository.findCarByCanIDriveIt(true));
     }
 }
-
-//kolla alla som finns i listan
