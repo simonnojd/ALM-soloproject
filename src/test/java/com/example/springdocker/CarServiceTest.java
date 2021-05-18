@@ -4,6 +4,7 @@ import com.example.springdocker.model.Car;
 import com.example.springdocker.repository.CarRepository;
 import com.example.springdocker.service.CarService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -19,7 +20,6 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class CarServiceTest {
-
     @Mock
     CarRepository carRepository;
     CarService carService;
@@ -28,7 +28,7 @@ public class CarServiceTest {
     void init() {
         carService = new CarService(carRepository);
     }
-
+    @DisplayName("Hämtar alla bilar")
     @Test
     void getCarsTest() {
         assertEquals(carRepository.findAll(), carService.getCars());
